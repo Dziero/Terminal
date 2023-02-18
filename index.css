@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    cursor: default;
+}
+
+body {
+    font-family: Inconsolata, monospace;
+    font-size: 20px;
+    color: white;
+    background-color: black;
+}
+
+#codeLine {
+    width: 100%;
+}
+
+#codeLine div, #codeLine input {
+    display: inline-block;
+} 
