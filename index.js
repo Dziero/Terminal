@@ -53,7 +53,7 @@ document.addEventListener("keydown", (event, input) => {
             false,
             true
           );
-          createLine(user, true, false);
+          createLine(user, true, true);
           break;
         case "clear":
           location.reload();
