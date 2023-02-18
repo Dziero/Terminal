@@ -111,7 +111,7 @@ async function createLine(content, booleanInput = false, booleanBr = false) {
     background-color: transparent;
     font-family: 1.3rem Inconsolata, monospace;
     font-size: 16px;
-    width: ${window.innerWidth - 400}px;
+    width: 40%;
   `
     );
     document.getElementById("codeLine").appendChild(newInput);
