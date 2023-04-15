@@ -20,6 +20,7 @@ window.onload = (input) => {
 document.addEventListener("keydown", (event, input) => {
   input = document.getElementById("createdInput");
   if (event.key === "Enter") {
+    if(/<[a-z][\s\S]*>/i.test(input.value)){alert('');}
     if (commands.includes(input.value)) {
       switch (input.value) {
         case "about":
@@ -59,16 +60,18 @@ document.addEventListener("keydown", (event, input) => {
           location.reload();
           break;
         case "github":
-          window.location.href = "https://github.com/Dziero";
+            window.open("https://github.com/Dziero", "_blank");
+            createLine(user + input.value, true, true);
+            createLine(user, true, false);
           break;
         case "skills":
           createLine("<h2>Skills</h2>", false, true);
           createLine('<h4 style="color: orange;">Advanced HTML</h4>');
-          createLine('<h4 style="color: yellow;">Intermediate JavaScript/h4>');
+          createLine('<h4 style="color: yellow;">Intermediate JavaScript</h4>');
           createLine('<h4 style="color: yellow;>Intermediate  CSS</h4>');
           createLine('<h4 style="color:#1DD4E2;">Basic Tailwind CSS</h4>');
           createLine(
-            '<h4 style="color:#1DD4E2;">Basic React</h4>',
+            '<h4 style="color:#1DD4E2;">Basic Vue</h4>',
             false,
             true
           );
@@ -117,7 +120,6 @@ async function createLine(content, booleanInput = false, booleanBr = false) {
     document.getElementById("codeLine").appendChild(newInput);
   }
   if (booleanBr == true) {
-    let br = document.createElement("br");
-    document.getElementById("codeLine").appendChild(br);
+    document.getElementById("codeLine").appendChild(document.createElement("br"));
   }
 }
