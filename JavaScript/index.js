@@ -20,7 +20,7 @@ window.onload = (input) => {
 document.addEventListener("keydown", (event, input) => {
   input = document.getElementById("createdInput");
   if (event.key === "Enter") {
-    if(/<[a-z][\s\S]*>/i.test(input.value)){alert('');}
+    if(/<[a-z][\s\S]*>/i.test(input.value)){}
     if (commands.includes(input.value)) {
       switch (input.value) {
         case "about":
